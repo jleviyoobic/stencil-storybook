@@ -5,16 +5,56 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-export namespace Components {}
+export namespace Components {
+  interface MyComponent {
+    /**
+     * First name.
+     */
+    first: string;
+    /**
+     * Last name.
+     */
+    last: string;
+    /**
+     * Middle name.
+     */
+    middle: string;
+  }
+}
 declare global {
-  interface HTMLElementTagNameMap {}
+  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
+  var HTMLMyComponentElement: {
+    prototype: HTMLMyComponentElement;
+    new (): HTMLMyComponentElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-component': HTMLMyComponentElement;
+  }
 }
 declare namespace LocalJSX {
-  interface IntrinsicElements {}
+  interface MyComponent {
+    /**
+     * First name.
+     */
+    first?: string;
+    /**
+     * Last name.
+     */
+    last?: string;
+    /**
+     * Middle name.
+     */
+    middle?: string;
+  }
+  interface IntrinsicElements {
+    'my-component': MyComponent;
+  }
 }
 export { LocalJSX as JSX };
 declare module '@stencil/core' {
   export namespace JSX {
-    interface IntrinsicElements {}
+    interface IntrinsicElements {
+      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+    }
   }
 }

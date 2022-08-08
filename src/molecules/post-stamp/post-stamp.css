@@ -1,0 +1,14 @@
+#container {
+  display: inline-flex;
+  align-items: center;
+}
+
+p {
+  margin: 0 8px;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+button-main {
+  font-size: 14px;
+}

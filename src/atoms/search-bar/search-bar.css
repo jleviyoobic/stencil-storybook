@@ -1,0 +1,38 @@
+:host {
+  width: 100%;
+}
+
+input {
+  padding: 7px 8px;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border-input-field, grey);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+input:hover {
+  border: 1px solid var(--color-border-input-field-hover, grey);
+}
+
+form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border-width: 0;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 0.375rem;
+  padding: 0 8px;
+}
+
+button:hover {
+  fill: var(--color-primary, blue);
+  background-color: var(--color-transparent-hover, lightblue);
+}

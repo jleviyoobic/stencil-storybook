@@ -1,0 +1,36 @@
+header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: var(--color-bg-header, white);
+  box-shadow: 0 1px 1px var(--color-header-shadow, grey);
+  z-index: 100;
+}
+
+#header_content {
+  width: var(--site-width, 1000px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: end;
+}
+
+#search_block {
+  display: flex;
+  flex: 1 auto;
+  max-width: 420px;
+  align-items: center;
+}
+
+search-bar {
+  margin: 0 1rem;
+}

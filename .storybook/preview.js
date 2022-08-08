@@ -2,6 +2,8 @@ import { getHostRef, registerHost, renderVdom } from '@stencil/core/internal/cli
 
 import { defineCustomElements } from '../loader';
 
+import './styles.css'
+
 defineCustomElements();
 
 export const decorators = [

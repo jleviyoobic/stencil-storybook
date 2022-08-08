@@ -1,0 +1,20 @@
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-btns {
+  display: flex;
+  align-items: center;
+}
+
+.container-btns.timeToRead p {
+  font-size: 12px;
+  font-weight: 100;
+  margin-right: 0.5rem;
+}
+
+.container-btns button-main {
+  font-size: 14px;
+}

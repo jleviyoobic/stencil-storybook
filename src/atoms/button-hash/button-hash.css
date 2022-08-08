@@ -1,0 +1,120 @@
+a {
+  padding: 4px 7px;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0);
+  text-decoration: none;
+  display: block;
+  font-weight: 100;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tiny {
+  font-size: var(--text-tiny, 12px);
+}
+
+.small {
+  font-size: var(--text-small, 14px);
+}
+
+.medium {
+  font-size: var(--text-medium, 16px);
+}
+
+.big {
+  font-size: var(--text-big, 18px);
+}
+
+.blue.hashtag {
+  color: blue;
+}
+
+.yellow.hashtag {
+  color: yellow;
+}
+
+.green.hashtag {
+  color: green;
+}
+
+.red.hashtag {
+  color: red;
+}
+
+.lightblue.hashtag {
+  color: lightblue;
+}
+
+.black.hashtag {
+  color: black;
+}
+
+.orange.hashtag {
+  color: orange;
+}
+
+.pink.hashtag {
+  color: pink;
+}
+
+.purple.hashtag {
+  color: purple;
+}
+
+.lightgreen.hashtag {
+  color: lightgreen;
+}
+
+a:hover {
+  transition: 0.1s ease-out;
+}
+
+a.blue:hover {
+  background-color: rgba(0, 0, 255, 0.05);
+  border: 1px solid blue;
+}
+
+a.yellow:hover {
+  background-color: rgba(255, 255, 0, 0.05);
+  border: 1px solid yellow;
+}
+
+a.green:hover {
+  background-color: rgba(0, 128, 0, 0.05);
+  border: 1px solid green;
+}
+
+a.red:hover {
+  background-color: rgba(255, 0, 0, 0.05);
+  border: 1px solid red;
+}
+
+a.lightblue:hover {
+  background-color: rgba(173, 216, 230, 0.05);
+  border: 1px solid lightblue;
+}
+
+a.black:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid black;
+}
+
+a.orange:hover {
+  background-color: rgba(255, 166, 0, 0.05);
+  border: 1px solid orange;
+}
+
+a.pink:hover {
+  background-color: rgba(255, 192, 203, 0.05);
+  border: 1px solid pink;
+}
+
+a.purple:hover {
+  background-color: rgba(128, 0, 128, 0.05);
+  border: 1px solid purple;
+}
+
+a.lightgreen:hover {
+  background-color: rgba(144, 238, 144, 0.05);
+  border: 1px solid lightgreen;
+}

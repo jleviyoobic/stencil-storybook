@@ -1,0 +1,21 @@
+#main_body {
+  height: 100vh;
+  width: var(--site-width, 1000px);
+  margin: auto;
+  display: flex;
+  padding-top: var(--header-height, 50px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 240px 2fr 1fr;
+  gap: 1rem;
+}
+
+#buttons_title {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+article-feed {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+import { Component, h, Prop } from '@stencil/core';
+
+@Component({
+  tag: 'article-feed',
+  styleUrl: 'article-feed.css',
+  shadow: true
+})
+export class ArticleFeed {
+  @Prop() article;
+
+  render() {
+    console.log(this.article);
+    return (
+      <div>
+        <card-article>
+          <post-stamp picSrc={this.article.author?.pic} username={this.article.author?.username} timestamp={this.article.post.timestamp}></post-stamp>
+          <div>
+            <a href="" class="articleTitle">
+              <h1>{this.article.post.title}</h1>
+            </a>
+            <article-tags tags={this.article.post.tags}></article-tags>
+            <article-stats reactions={this.article.post.reactions} comments={this.article.post.comments} minToRead={this.article.post.readTime}></article-stats>
+          </div>
+        </card-article>
+      </div>
+    );
+  }
+}

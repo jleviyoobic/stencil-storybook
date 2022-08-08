@@ -1,0 +1,20 @@
+div {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.articleTitle {
+  text-decoration: none;
+  color: var(--color-text-basic-dark, black);
+}
+
+.articleTitle:hover {
+  color: var(--color-primary-hover, blue);
+}
+
+card-article div {
+  margin-left: 40px;
+}

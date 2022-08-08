@@ -1,0 +1,10 @@
+a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 40px;
+  width: auto;
+}

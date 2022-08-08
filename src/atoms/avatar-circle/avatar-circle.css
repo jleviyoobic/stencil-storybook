@@ -1,0 +1,12 @@
+:host {
+  position: relative;
+}
+
+img {
+  cursor: pointer;
+  max-height: 32px;
+  width: auto;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}

@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Articles } from "./dummy-data";
 export namespace Components {
     interface ArticleFeed {
         "article": any;
@@ -26,6 +27,7 @@ export namespace Components {
         "link": string;
     }
     interface ButtonMain {
+        "align": string;
         "color": string;
         "font": string;
         "link": string;
@@ -37,8 +39,13 @@ export namespace Components {
     interface DescriptionBlock {
     }
     interface FeedTemplate {
+        "articles": Articles[];
+    }
+    interface HomePage {
     }
     interface LogoMain {
+    }
+    interface MainMenu {
     }
     interface NavbarMain {
     }
@@ -49,6 +56,10 @@ export namespace Components {
     }
     interface SearchBar {
     }
+}
+export interface FeedTemplateCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLFeedTemplateElement;
 }
 declare global {
     interface HTMLArticleFeedElement extends Components.ArticleFeed, HTMLStencilElement {
@@ -111,11 +122,23 @@ declare global {
         prototype: HTMLFeedTemplateElement;
         new (): HTMLFeedTemplateElement;
     };
+    interface HTMLHomePageElement extends Components.HomePage, HTMLStencilElement {
+    }
+    var HTMLHomePageElement: {
+        prototype: HTMLHomePageElement;
+        new (): HTMLHomePageElement;
+    };
     interface HTMLLogoMainElement extends Components.LogoMain, HTMLStencilElement {
     }
     var HTMLLogoMainElement: {
         prototype: HTMLLogoMainElement;
         new (): HTMLLogoMainElement;
+    };
+    interface HTMLMainMenuElement extends Components.MainMenu, HTMLStencilElement {
+    }
+    var HTMLMainMenuElement: {
+        prototype: HTMLMainMenuElement;
+        new (): HTMLMainMenuElement;
     };
     interface HTMLNavbarMainElement extends Components.NavbarMain, HTMLStencilElement {
     }
@@ -146,7 +169,9 @@ declare global {
         "card-main": HTMLCardMainElement;
         "description-block": HTMLDescriptionBlockElement;
         "feed-template": HTMLFeedTemplateElement;
+        "home-page": HTMLHomePageElement;
         "logo-main": HTMLLogoMainElement;
+        "main-menu": HTMLMainMenuElement;
         "navbar-main": HTMLNavbarMainElement;
         "post-stamp": HTMLPostStampElement;
         "search-bar": HTMLSearchBarElement;
@@ -173,6 +198,7 @@ declare namespace LocalJSX {
         "link"?: string;
     }
     interface ButtonMain {
+        "align"?: string;
         "color"?: string;
         "font"?: string;
         "link"?: string;
@@ -184,8 +210,14 @@ declare namespace LocalJSX {
     interface DescriptionBlock {
     }
     interface FeedTemplate {
+        "articles"?: Articles[];
+        "onArticlesFeedMode"?: (event: FeedTemplateCustomEvent<string>) => void;
+    }
+    interface HomePage {
     }
     interface LogoMain {
+    }
+    interface MainMenu {
     }
     interface NavbarMain {
     }
@@ -207,7 +239,9 @@ declare namespace LocalJSX {
         "card-main": CardMain;
         "description-block": DescriptionBlock;
         "feed-template": FeedTemplate;
+        "home-page": HomePage;
         "logo-main": LogoMain;
+        "main-menu": MainMenu;
         "navbar-main": NavbarMain;
         "post-stamp": PostStamp;
         "search-bar": SearchBar;
@@ -227,7 +261,9 @@ declare module "@stencil/core" {
             "card-main": LocalJSX.CardMain & JSXBase.HTMLAttributes<HTMLCardMainElement>;
             "description-block": LocalJSX.DescriptionBlock & JSXBase.HTMLAttributes<HTMLDescriptionBlockElement>;
             "feed-template": LocalJSX.FeedTemplate & JSXBase.HTMLAttributes<HTMLFeedTemplateElement>;
+            "home-page": LocalJSX.HomePage & JSXBase.HTMLAttributes<HTMLHomePageElement>;
             "logo-main": LocalJSX.LogoMain & JSXBase.HTMLAttributes<HTMLLogoMainElement>;
+            "main-menu": LocalJSX.MainMenu & JSXBase.HTMLAttributes<HTMLMainMenuElement>;
             "navbar-main": LocalJSX.NavbarMain & JSXBase.HTMLAttributes<HTMLNavbarMainElement>;
             "post-stamp": LocalJSX.PostStamp & JSXBase.HTMLAttributes<HTMLPostStampElement>;
             "search-bar": LocalJSX.SearchBar & JSXBase.HTMLAttributes<HTMLSearchBarElement>;

@@ -19,3 +19,29 @@
 article-feed {
   margin-bottom: 1rem;
 }
+
+description-block p {
+  font-weight: 100;
+}
+
+description-block a {
+  text-decoration: none;
+  color: var(--color-primary, blue);
+}
+
+description-block a:hover {
+  text-decoration: underline;
+  color: var(--color-primary-hover, darkblue);
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.emptyArts {
+  padding: 2rem 0;
+}
+
+.emptyArts h2 {
+  text-align: center;
+}

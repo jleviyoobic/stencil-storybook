@@ -9,7 +9,6 @@ export class ArticleFeed {
   @Prop() article;
 
   render() {
-    console.log(this.article);
     return (
       <div>
         <card-article>

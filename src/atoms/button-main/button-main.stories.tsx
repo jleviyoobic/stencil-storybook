@@ -14,6 +14,10 @@ export default {
       options: ['bold', 'regular', 'light'],
       type: 'radio'
     },
+    align: {
+      options: ['start', 'center', 'end'],
+      type: 'radio'
+    },
     href: {control: 'text'}
   }
 }

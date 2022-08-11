@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'main-menu',
-  styleUrl: 'main-menu.css',
+  styleUrl: 'main-menu.scss',
   shadow: true
 })
 export class MainMenu {

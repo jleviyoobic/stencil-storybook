@@ -1,0 +1,21 @@
+@import '../../styles/styles.scss';
+
+#container {
+  display: inline-flex;
+  align-items: center;
+}
+
+p {
+  margin: 0 $p-50;
+  font-weight: 100;
+  font-size: $text-tiny;
+}
+
+button-main {
+  font-size: $text-small;
+}
+
+#userPic {
+  height: 2rem;
+  width: 2rem;
+}

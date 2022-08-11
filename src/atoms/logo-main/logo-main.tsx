@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'logo-main',
-  styleUrl: 'logo-main.css',
+  styleUrl: 'logo-main.scss',
   shadow: true,
 })
 export class LogoMain {

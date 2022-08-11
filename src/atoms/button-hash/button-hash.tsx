@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'button-hash',
-  styleUrl: 'button-hash.css',
+  styleUrl: 'button-hash.scss',
   shadow: true,
 })
 export class ButtonHash {

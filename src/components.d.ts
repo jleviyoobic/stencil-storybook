@@ -31,10 +31,10 @@ export namespace Components {
         "color": string;
         "font": string;
         "link": string;
-    }
-    interface CardArticle {
+        "username": string;
     }
     interface CardMain {
+        "bgColor": string;
     }
     interface DescriptionBlock {
     }
@@ -55,6 +55,9 @@ export namespace Components {
         "username": string;
     }
     interface SearchBar {
+    }
+    interface UserModal {
+        "user": string;
     }
 }
 export interface FeedTemplateCustomEvent<T> extends CustomEvent<T> {
@@ -97,12 +100,6 @@ declare global {
     var HTMLButtonMainElement: {
         prototype: HTMLButtonMainElement;
         new (): HTMLButtonMainElement;
-    };
-    interface HTMLCardArticleElement extends Components.CardArticle, HTMLStencilElement {
-    }
-    var HTMLCardArticleElement: {
-        prototype: HTMLCardArticleElement;
-        new (): HTMLCardArticleElement;
     };
     interface HTMLCardMainElement extends Components.CardMain, HTMLStencilElement {
     }
@@ -158,6 +155,12 @@ declare global {
         prototype: HTMLSearchBarElement;
         new (): HTMLSearchBarElement;
     };
+    interface HTMLUserModalElement extends Components.UserModal, HTMLStencilElement {
+    }
+    var HTMLUserModalElement: {
+        prototype: HTMLUserModalElement;
+        new (): HTMLUserModalElement;
+    };
     interface HTMLElementTagNameMap {
         "article-feed": HTMLArticleFeedElement;
         "article-stats": HTMLArticleStatsElement;
@@ -165,7 +168,6 @@ declare global {
         "avatar-circle": HTMLAvatarCircleElement;
         "button-hash": HTMLButtonHashElement;
         "button-main": HTMLButtonMainElement;
-        "card-article": HTMLCardArticleElement;
         "card-main": HTMLCardMainElement;
         "description-block": HTMLDescriptionBlockElement;
         "feed-template": HTMLFeedTemplateElement;
@@ -175,6 +177,7 @@ declare global {
         "navbar-main": HTMLNavbarMainElement;
         "post-stamp": HTMLPostStampElement;
         "search-bar": HTMLSearchBarElement;
+        "user-modal": HTMLUserModalElement;
     }
 }
 declare namespace LocalJSX {
@@ -202,10 +205,10 @@ declare namespace LocalJSX {
         "color"?: string;
         "font"?: string;
         "link"?: string;
-    }
-    interface CardArticle {
+        "username"?: string;
     }
     interface CardMain {
+        "bgColor"?: string;
     }
     interface DescriptionBlock {
     }
@@ -228,6 +231,9 @@ declare namespace LocalJSX {
     }
     interface SearchBar {
     }
+    interface UserModal {
+        "user"?: string;
+    }
     interface IntrinsicElements {
         "article-feed": ArticleFeed;
         "article-stats": ArticleStats;
@@ -235,7 +241,6 @@ declare namespace LocalJSX {
         "avatar-circle": AvatarCircle;
         "button-hash": ButtonHash;
         "button-main": ButtonMain;
-        "card-article": CardArticle;
         "card-main": CardMain;
         "description-block": DescriptionBlock;
         "feed-template": FeedTemplate;
@@ -245,6 +250,7 @@ declare namespace LocalJSX {
         "navbar-main": NavbarMain;
         "post-stamp": PostStamp;
         "search-bar": SearchBar;
+        "user-modal": UserModal;
     }
 }
 export { LocalJSX as JSX };
@@ -257,7 +263,6 @@ declare module "@stencil/core" {
             "avatar-circle": LocalJSX.AvatarCircle & JSXBase.HTMLAttributes<HTMLAvatarCircleElement>;
             "button-hash": LocalJSX.ButtonHash & JSXBase.HTMLAttributes<HTMLButtonHashElement>;
             "button-main": LocalJSX.ButtonMain & JSXBase.HTMLAttributes<HTMLButtonMainElement>;
-            "card-article": LocalJSX.CardArticle & JSXBase.HTMLAttributes<HTMLCardArticleElement>;
             "card-main": LocalJSX.CardMain & JSXBase.HTMLAttributes<HTMLCardMainElement>;
             "description-block": LocalJSX.DescriptionBlock & JSXBase.HTMLAttributes<HTMLDescriptionBlockElement>;
             "feed-template": LocalJSX.FeedTemplate & JSXBase.HTMLAttributes<HTMLFeedTemplateElement>;
@@ -267,6 +272,7 @@ declare module "@stencil/core" {
             "navbar-main": LocalJSX.NavbarMain & JSXBase.HTMLAttributes<HTMLNavbarMainElement>;
             "post-stamp": LocalJSX.PostStamp & JSXBase.HTMLAttributes<HTMLPostStampElement>;
             "search-bar": LocalJSX.SearchBar & JSXBase.HTMLAttributes<HTMLSearchBarElement>;
+            "user-modal": LocalJSX.UserModal & JSXBase.HTMLAttributes<HTMLUserModalElement>;
         }
     }
 }

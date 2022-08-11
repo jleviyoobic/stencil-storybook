@@ -1,24 +1,31 @@
-import { Component, h, Listen, State, } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 
 import { Articles, dummy_articles, dummy_articles_latest } from '../../dummy-data';
 
 @Component({
   tag: 'home-page',
-  styleUrl: 'home-page.css',
+  styleUrl: 'home-page.scss',
   shadow: true
 })
 export class Feed {
   artMode = 'relevant';
   @State() articles: Articles[] = dummy_articles;
 
-  @Listen('articlesFeedMode', { target: 'body' })
-  onSrtModeChanged(event: CustomEvent) {
-    if (event.detail === 'latest') this.articles = dummy_articles_latest;
-    else if (event.detail === 'top') this.articles = []
-    else this.articles = dummy_articles;
+  onSrtModeChanged({ detail }: CustomEvent<string>) {
+    switch (detail) {
+      case 'latest':
+        this.articles = dummy_articles_latest;
+        break;
+      case 'top':
+        this.articles = [];
+        break;
+      default:
+        this.articles = dummy_articles;
+        break;
+    }
   }
 
   render() {
-    return <feed-template articles={this.articles} />;
+    return <feed-template articles={this.articles} onArticlesFeedMode={this.onSrtModeChanged.bind(this)} />;
   }
 }

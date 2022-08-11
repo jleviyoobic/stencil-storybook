@@ -1,8 +1,7 @@
 import { getHostRef, registerHost, renderVdom } from '@stencil/core/internal/client';
 
 import { defineCustomElements } from '../loader';
-
-import './styles.css'
+import './styles.scss';
 
 defineCustomElements();
 

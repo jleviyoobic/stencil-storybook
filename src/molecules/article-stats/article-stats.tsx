@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'article-stats',
-  styleUrl: 'article-stats.css',
+  styleUrl: 'article-stats.scss',
   shadow: true
 })
 export class ArticleStats {

@@ -1,0 +1,54 @@
+/* colors */
+$color-text-basic-dark: black;
+$color-text-basic-light: white;
+$color-primary: #3b49df;
+$color-primary-hover: #2f3ab2;
+$color-primary-text: white;
+$color-transparent-hover: #3b49df1a;
+$color-transparent-text: #404040;
+$color-light: #d6d6d7;
+$color-light-hover: #bdbdbd;
+$color-bg-header: white;
+$color-header-shadow: #0000001a;
+$color-bg-main: whitesmoke;
+$color-bg-card-primary: white;
+$color-bg-card-secondary: #fafafa;
+$card-secondary-border: #1717170d;
+
+/* fonts sizes */
+$text-tiny: 0.6rem;
+$text-small: 0.8rem;
+$text-medium: 1rem;
+$text-big: 1.2rem;
+$text-bigger: 1.5rem;
+$text-weight-light: 100;
+
+/* site sizes */
+$site-width: 1280px;
+$header-height: 56px;
+$logo-mail-height: 40px;
+$search-block: 26rem;
+$modal-width: 22re,;
+
+/* borders */
+$color-border-input-field: #d4d4d4;
+$color-border-input-field-hover: #a4a4a4;
+$border-width: 1px;
+$border-radius: 0.375rem;
+
+/* padding & margin */
+$p-25: 0.25rem;
+$p-50: 0.5rem;
+$p-80: 0.8rem;
+$p-100: 1rem;
+$p-120: 1.2rem;
+$p-200: 2rem;
+$p-username-button: $p-25 $p-80 $p-25 $p-50;
+
+/* shadows */
+$modal-shadow: 1px 1px 10px $color-light-hover;
+
+
+/* grid */
+$grid-feed: 15rem 2fr 1fr;
+$grid-gap: 1rem;

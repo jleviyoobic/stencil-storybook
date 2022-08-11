@@ -1,0 +1,9 @@
+@import '../src/styles/styles';
+
+html, body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $color-bg-main
+}

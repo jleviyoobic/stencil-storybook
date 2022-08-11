@@ -1,45 +1,51 @@
+@import '../../styles/styles';
+
 #main_body {
   height: 100vh;
-  width: var(--site-width, 1000px);
+  width: $site-width;
   margin: auto;
   display: flex;
-  padding-top: var(--header-height, 50px);
+  padding-top: $header-height;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 240px 2fr 1fr;
-  gap: 1rem;
+  grid-template-columns: $grid-feed;
+  gap: $grid-gap;
 }
 
 #buttons_title {
   display: flex;
-  font-size: 18px;
-  margin-bottom: 0.5rem;
+  font-size: $text-big;
+  margin-bottom: $p-50;
 }
 
 article-feed {
-  margin-bottom: 1rem;
+  margin-bottom: $p-100;
 }
 
 description-block p {
   font-weight: 100;
 }
 
+description-block h2 {
+  margin-top: 0;
+}
+
 description-block a {
   text-decoration: none;
-  color: var(--color-primary, blue);
+  color: $color-primary;
 }
 
 description-block a:hover {
   text-decoration: underline;
-  color: var(--color-primary-hover, darkblue);
+  color: $color-primary-hover;
 }
 
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: $p-100;
 }
 
 .emptyArts {
-  padding: 2rem 0;
+  padding: $p-200 0;
 }
 
 .emptyArts h2 {

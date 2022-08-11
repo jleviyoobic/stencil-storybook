@@ -4,7 +4,7 @@ import { Articles } from '../../dummy-data';
 
 @Component({
   tag: 'feed-template',
-  styleUrl: 'feed.css',
+  styleUrl: 'feed.scss',
   shadow: true
 })
 export class Feed {
@@ -12,7 +12,7 @@ export class Feed {
 
   @State() chosenMode = 'relevant';
 
-  @Event({ bubbles: true, composed: true }) articlesFeedMode: EventEmitter<string>;
+  @Event() articlesFeedMode: EventEmitter<string>;
 
   onArtModeSelected(mode: string) {
     this.articlesFeedMode.emit(mode);

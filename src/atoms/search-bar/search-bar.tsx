@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'search-bar',
-  styleUrl: 'search-bar.css',
+  styleUrl: 'search-bar.scss',
   shadow: true
 })
 export class SearchBar {

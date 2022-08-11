@@ -3,7 +3,7 @@ const colorOptions = ['blue', 'yellow', 'green', 'red', 'lightblue', 'black', 'o
 
 @Component({
   tag: 'article-tags',
-  styleUrl: 'article-tags.css',
+  styleUrl: 'article-tags.scss',
   shadow: true,
 })
 export class ArticleTags {

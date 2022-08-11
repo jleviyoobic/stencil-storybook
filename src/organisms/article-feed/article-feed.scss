@@ -1,0 +1,18 @@
+@import '../../styles/styles';
+
+div {
+  margin-bottom: $p-50;
+}
+
+.articleTitle {
+  text-decoration: none;
+  color: $color-text-basic-dark;
+}
+
+.articleTitle:hover {
+  color: $color-primary-hover;
+}
+
+card-main div {
+  margin-left: 2.5rem;
+}

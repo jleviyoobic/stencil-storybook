@@ -1,15 +1,16 @@
-import { Component, h, } from '@stencil/core';
+import { Component, h, Prop, } from '@stencil/core';
 
 @Component({
   tag: 'card-main',
-  styleUrl: 'card.css',
+  styleUrl: 'card.scss',
   shadow: true,
 })
 export class CardMain {
+  @Prop() bgColor: string
 
   render() {
     return (
-      <div>
+      <div class={this.bgColor}>
         <slot></slot>
       </div>
     );

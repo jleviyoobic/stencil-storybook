@@ -2,14 +2,14 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'description-block',
-  styleUrl: 'description-block.css',
+  styleUrl: 'description-block.scss',
   shadow: true
 })
 export class DescriptionBlock {
   render() {
     return (
       <div>
-        <card-main>
+        <card-main bgColor='grey'>
           <slot></slot>
           <button-main align='center' color="secondary" font="regular" link="https://www.google.com">
             Create account

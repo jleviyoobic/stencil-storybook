@@ -18,6 +18,7 @@ export default {
       options: ['start', 'center', 'end'],
       type: 'radio'
     },
+    username: {control: 'text'},
     href: {control: 'text'}
   }
 }
@@ -27,4 +28,4 @@ export const Secondary: Story<Components.ButtonMain> = (args) => <button-main co
 export const Transparent: Story<Components.ButtonMain> = (args) => <button-main color='transparent' {...args}>Transparent</button-main>;
 export const Smallest: Story<Components.ButtonMain> = (args) => <button-main color='smallest' {...args}>Smallest</button-main>;
 export const Tabs: Story<Components.ButtonMain> = (args) => <button-main color='tabs' {...args}>Tabs</button-main>;
-export const Username: Story<Components.ButtonMain> = (args) => <button-main color='username' {...args}>User Name</button-main>;
+export const Username: Story<Components.ButtonMain> = (args) => <button-main username='Chris Bongers' color='username' {...args}>User Name</button-main>;

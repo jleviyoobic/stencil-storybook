@@ -1,0 +1,55 @@
+@import '../../styles/styles';
+
+#container-card {
+  width: $modal-width;
+  position: absolute;
+  z-index: 200;
+  text-align: start;
+  top: 1.6rem;
+  box-shadow: $modal-shadow;
+  border-radius: $border-radius;
+}
+
+header {
+  background-color: $color-primary-hover;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+#userPic {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#headerContent {
+  display: flex;
+  align-items: baseline;
+  margin: 1rem;
+}
+
+article {
+  margin: 4rem 0 0 0;
+}
+
+p {
+  font-weight: 100;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+#headerContent h3 {
+  white-space: nowrap;
+}

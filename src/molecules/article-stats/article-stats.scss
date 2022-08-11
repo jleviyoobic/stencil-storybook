@@ -1,3 +1,5 @@
+@import '../../styles/styles';
+
 #container {
   display: flex;
   align-items: center;
@@ -10,11 +12,11 @@
 }
 
 .container-btns.timeToRead p {
-  font-size: 12px;
+  font-size: $text-tiny;
   font-weight: 100;
-  margin-right: 0.5rem;
+  margin-right: $p-50;
 }
 
 .container-btns button-main {
-  font-size: 14px;
+  font-size: $text-small
 }

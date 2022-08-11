@@ -2,7 +2,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'article-feed',
-  styleUrl: 'article-feed.css',
+  styleUrl: 'article-feed.scss',
   shadow: true
 })
 export class ArticleFeed {
@@ -11,7 +11,7 @@ export class ArticleFeed {
   render() {
     return (
       <div>
-        <card-article>
+        <card-main bgColor='white'>
           <post-stamp picSrc={this.article.author?.pic} username={this.article.author?.username} timestamp={this.article.post.timestamp}></post-stamp>
           <div>
             <a href="" class="articleTitle">
@@ -20,7 +20,7 @@ export class ArticleFeed {
             <article-tags tags={this.article.post.tags}></article-tags>
             <article-stats reactions={this.article.post.reactions} comments={this.article.post.comments} minToRead={this.article.post.readTime}></article-stats>
           </div>
-        </card-article>
+        </card-main>
       </div>
     );
   }

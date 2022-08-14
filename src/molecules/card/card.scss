@@ -1,7 +1,6 @@
 @import '../../styles/styles';
 
 div {
-  border-radius: $border-radius;
   box-shadow: 0 0 0 $border-width $card-secondary-border;
 }
 
@@ -13,4 +12,10 @@ div {
 .white {
   background-color: $color-bg-card-primary;
   padding: $p-120;
+}
+
+@media (min-width: 768px) {
+  div {
+    border-radius: $border-radius;
+  }
 }

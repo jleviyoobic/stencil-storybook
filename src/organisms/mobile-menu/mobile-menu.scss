@@ -1,0 +1,82 @@
+@import '../../styles/styles';
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+#description {
+  padding: 0 0.5rem;
+}
+
+#mainContainer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 200;
+}
+
+#mainContainer.closed {
+  transition: 0.3s ease-out;
+  left: -100%;
+}
+
+#mainContainer.opened {
+  transition: 0.3s ease-out;
+  left: 0;
+}
+
+#backdrop.opened {
+  opacity: 0.26;
+  pointer-events: all;
+  transition: opacity 0.3s;
+}
+
+#backdrop.closed {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+#container {
+  z-index: 200;
+  height: 100vh;
+  overflow-y: scroll;
+  width: 300px;
+  background-color: $color-bg-card-primary;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+#backdrop {
+  position: fixed;
+  z-index: 150;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: $color-backdrop;
+}
+
+description-block p {
+  font-weight: 100;
+}
+
+description-block h2 {
+  margin-top: 0;
+}
+
+description-block a {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+description-block a:hover {
+  text-decoration: underline;
+  color: $color-primary-hover;
+}

@@ -38,7 +38,7 @@ export class Feed {
       <div>
         <navbar-main />
         <div id="main_body">
-          <aside>
+          <nav>
             <description-block>
               <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
               <h2>
@@ -49,7 +49,7 @@ export class Feed {
             <div class="mt-1">
               <main-menu></main-menu>
             </div>
-          </aside>
+          </nav>
           <div>
             <div id="buttons_title">
               <button-main color="tabs" font={this.chosenMode === 'relevant' ? 'bold' : 'light'} onClick={this.onArtModeSelected.bind(this, 'relevant')}>
@@ -64,6 +64,9 @@ export class Feed {
             </div>
             {articlesBlock}
           </div>
+          <aside>
+            hi
+          </aside>
         </div>
       </div>
     );

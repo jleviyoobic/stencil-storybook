@@ -2,13 +2,13 @@
 
 #main_body {
   height: 100vh;
-  width: $site-width;
+  max-width: $site-width;
   margin: auto;
   display: flex;
   padding-top: $header-height;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: $grid-feed;
+  grid-template-columns: $grid-mobile-small-feed;
   gap: $grid-gap;
 }
 
@@ -50,4 +50,32 @@ description-block a:hover {
 
 .emptyArts h2 {
   text-align: center;
+}
+
+nav {
+  display: none;
+}
+
+aside {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  #main_body {
+    grid-template-columns: $grid-mobile-middle-feed
+  }
+}
+
+@media (min-width: 1024px) {
+  aside {
+    display: block;
+  }
+
+  #main_body {
+    grid-template-columns: $grid-feed
+  }
 }

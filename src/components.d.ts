@@ -36,6 +36,9 @@ export namespace Components {
     interface CardMain {
         "bgColor": string;
     }
+    interface CustomIcons {
+        "iconName": string;
+    }
     interface DescriptionBlock {
     }
     interface FeedTemplate {
@@ -46,6 +49,9 @@ export namespace Components {
     interface LogoMain {
     }
     interface MainMenu {
+    }
+    interface MobileMenu {
+        "opened": boolean;
     }
     interface NavbarMain {
     }
@@ -63,6 +69,10 @@ export namespace Components {
 export interface FeedTemplateCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLFeedTemplateElement;
+}
+export interface MobileMenuCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMobileMenuElement;
 }
 declare global {
     interface HTMLArticleFeedElement extends Components.ArticleFeed, HTMLStencilElement {
@@ -107,6 +117,12 @@ declare global {
         prototype: HTMLCardMainElement;
         new (): HTMLCardMainElement;
     };
+    interface HTMLCustomIconsElement extends Components.CustomIcons, HTMLStencilElement {
+    }
+    var HTMLCustomIconsElement: {
+        prototype: HTMLCustomIconsElement;
+        new (): HTMLCustomIconsElement;
+    };
     interface HTMLDescriptionBlockElement extends Components.DescriptionBlock, HTMLStencilElement {
     }
     var HTMLDescriptionBlockElement: {
@@ -136,6 +152,12 @@ declare global {
     var HTMLMainMenuElement: {
         prototype: HTMLMainMenuElement;
         new (): HTMLMainMenuElement;
+    };
+    interface HTMLMobileMenuElement extends Components.MobileMenu, HTMLStencilElement {
+    }
+    var HTMLMobileMenuElement: {
+        prototype: HTMLMobileMenuElement;
+        new (): HTMLMobileMenuElement;
     };
     interface HTMLNavbarMainElement extends Components.NavbarMain, HTMLStencilElement {
     }
@@ -169,11 +191,13 @@ declare global {
         "button-hash": HTMLButtonHashElement;
         "button-main": HTMLButtonMainElement;
         "card-main": HTMLCardMainElement;
+        "custom-icons": HTMLCustomIconsElement;
         "description-block": HTMLDescriptionBlockElement;
         "feed-template": HTMLFeedTemplateElement;
         "home-page": HTMLHomePageElement;
         "logo-main": HTMLLogoMainElement;
         "main-menu": HTMLMainMenuElement;
+        "mobile-menu": HTMLMobileMenuElement;
         "navbar-main": HTMLNavbarMainElement;
         "post-stamp": HTMLPostStampElement;
         "search-bar": HTMLSearchBarElement;
@@ -210,6 +234,9 @@ declare namespace LocalJSX {
     interface CardMain {
         "bgColor"?: string;
     }
+    interface CustomIcons {
+        "iconName"?: string;
+    }
     interface DescriptionBlock {
     }
     interface FeedTemplate {
@@ -221,6 +248,10 @@ declare namespace LocalJSX {
     interface LogoMain {
     }
     interface MainMenu {
+    }
+    interface MobileMenu {
+        "onMenuClosed"?: (event: MobileMenuCustomEvent<boolean>) => void;
+        "opened"?: boolean;
     }
     interface NavbarMain {
     }
@@ -242,11 +273,13 @@ declare namespace LocalJSX {
         "button-hash": ButtonHash;
         "button-main": ButtonMain;
         "card-main": CardMain;
+        "custom-icons": CustomIcons;
         "description-block": DescriptionBlock;
         "feed-template": FeedTemplate;
         "home-page": HomePage;
         "logo-main": LogoMain;
         "main-menu": MainMenu;
+        "mobile-menu": MobileMenu;
         "navbar-main": NavbarMain;
         "post-stamp": PostStamp;
         "search-bar": SearchBar;
@@ -264,11 +297,13 @@ declare module "@stencil/core" {
             "button-hash": LocalJSX.ButtonHash & JSXBase.HTMLAttributes<HTMLButtonHashElement>;
             "button-main": LocalJSX.ButtonMain & JSXBase.HTMLAttributes<HTMLButtonMainElement>;
             "card-main": LocalJSX.CardMain & JSXBase.HTMLAttributes<HTMLCardMainElement>;
+            "custom-icons": LocalJSX.CustomIcons & JSXBase.HTMLAttributes<HTMLCustomIconsElement>;
             "description-block": LocalJSX.DescriptionBlock & JSXBase.HTMLAttributes<HTMLDescriptionBlockElement>;
             "feed-template": LocalJSX.FeedTemplate & JSXBase.HTMLAttributes<HTMLFeedTemplateElement>;
             "home-page": LocalJSX.HomePage & JSXBase.HTMLAttributes<HTMLHomePageElement>;
             "logo-main": LocalJSX.LogoMain & JSXBase.HTMLAttributes<HTMLLogoMainElement>;
             "main-menu": LocalJSX.MainMenu & JSXBase.HTMLAttributes<HTMLMainMenuElement>;
+            "mobile-menu": LocalJSX.MobileMenu & JSXBase.HTMLAttributes<HTMLMobileMenuElement>;
             "navbar-main": LocalJSX.NavbarMain & JSXBase.HTMLAttributes<HTMLNavbarMainElement>;
             "post-stamp": LocalJSX.PostStamp & JSXBase.HTMLAttributes<HTMLPostStampElement>;
             "search-bar": LocalJSX.SearchBar & JSXBase.HTMLAttributes<HTMLSearchBarElement>;

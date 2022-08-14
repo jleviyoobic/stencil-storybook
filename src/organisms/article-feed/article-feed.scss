@@ -13,6 +13,24 @@ div {
   color: $color-primary-hover;
 }
 
-card-main div {
-  margin-left: 2.5rem;
+a {
+  font-size: 0.7rem;
+}
+
+#tagsBlock {
+  margin-bottom: $p-100;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  card-main div {
+    margin-left: 2.5rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
 }

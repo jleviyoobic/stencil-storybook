@@ -11,6 +11,7 @@ header {
   background-color: $color-bg-header;
   box-shadow: 0 $border-width $border-width $color-header-shadow;
   z-index: 100;
+  padding: 0 0.5rem;
 }
 
 #header_content {
@@ -35,4 +36,33 @@ header {
 
 search-bar {
   margin: 0 $p-100;
+  display: none;
+}
+
+#loginButton {
+  display: none;
+}
+
+#hamburgerBtn {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  search-bar {
+    display: block;
+  }
+
+  #loginButton {
+    display: block;
+  }
+
+  #hamburgerBtn {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+  }
 }
